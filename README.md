@@ -50,4 +50,8 @@
 ## How to dockerize javascript application
 
 - created a app.js file
--
+- Now create a Dockerfile script according to the flow in the Dockerfile
+- now run "docker build -t dockerize-js ." here (.) means current path
+- then image is created
+- run "docker images" to get the ID of the image, copy the ID and run by "docker run copied-id
+- you will get the answer in the terminal
