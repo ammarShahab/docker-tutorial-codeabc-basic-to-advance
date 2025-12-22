@@ -64,3 +64,4 @@
 
 - run "npm init -y"
 - install express and save it in package.json
+- now follow the flow in the Dockerfile
