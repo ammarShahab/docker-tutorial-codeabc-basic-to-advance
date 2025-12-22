@@ -51,7 +51,16 @@
 
 - created a app.js file
 - Now create a Dockerfile script according to the flow in the Dockerfile
-- now run "docker build -t dockerize-js ." here (.) means current path
+- now run "docker build --tag dockerize-JS:v1 ." here (--tag) means tag and dockerize-js is the tagged name of the image and (.) means current path
+
+##### Note: to see all command run "docker build --help" and "docker run --help"
+
 - then image is created
-- run "docker images" to get the ID of the image, copy the ID and run by "docker run copied-id
+- if u build command without any tag then run "docker images" to get the ID of the image, copy the ID and run by "docker run copied-id
+- as we have given the tag so we can run "docker run dockerize-js:v1"
 - you will get the answer in the terminal
+
+## 2.0 Dockerize nodejs application
+
+- run "npm init -y"
+- install express and save it in package.json
