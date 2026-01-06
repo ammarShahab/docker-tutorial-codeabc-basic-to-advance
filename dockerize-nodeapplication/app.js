@@ -17,7 +17,7 @@ app.get("/error", (req, res) => {
 // Error handling middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
-  res.status(500).send("Error Occured: " + err.message);
+  res.status(500).send("Error Occurred: " + err.message);
 });
 
 app.listen(PORT, () => {

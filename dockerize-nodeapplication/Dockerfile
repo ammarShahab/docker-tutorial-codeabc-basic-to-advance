@@ -4,7 +4,7 @@ FROM node:24
 # 2.2 in which directory in docker it will set the files which is /app
 WORKDIR /app
 
-# 2.3 first dot means copy all my source file from my local machine which is declare by (.) i.e dockerize-nodeapplication folder and second dot means paste it to the docker directory which defined in 1.1 
+# 2.3 first dot means copy all my source file from my local machine which is declare by (.) i.e dockerize-nodeapplication folder and second dot means paste it to the docker directory which defined in 2.2 
 COPY . .
 
 # but if u not declare 1.1 earliar then u have to set the command "COPY . /app"
