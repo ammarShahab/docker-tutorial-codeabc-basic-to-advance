@@ -66,4 +66,4 @@
 - install express and save it in package.json
 - now follow the flow in the Dockerfile from 2.1
 - now to stop any container run "docker container stop container_id" or u can manually stop it using docker desktop
-- as the container stopped but the container will persist in the docker hub. so to run the specific container again run "docker container start container_id or container_name"
+- as the container stopped but the container will persist in the docker container as they are not removed. so to run the specific container again run "docker container start container_id or container_name"
