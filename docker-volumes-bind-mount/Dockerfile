@@ -22,3 +22,5 @@ CMD ["npm", "run", "dev"]
 # Note: "-v "C:\Projects\docker-tutorial-codeabc-basic-to-advance\docker-volumes-bind-mount" is the host path which is copied from docker-volumes-bind-mount folder copy path and "/app" is the container path.
 
 # 4.5 Now if u change any code the updated response will be shown in localhost:5001
+
+#  4.6 to simplify the command "docker run -p 5001:5000 --name volumes-container --rm -v "C:\Projects\docker-tutorial-codeabc-basic-to-advance\docker-volumes-bind-mount:/app" -v "/app/node_modules" volumes-bind-i" then run the command in a simplified way "docker run -p 5001:5000 --name volumes-container --rm -v "${PWD}:/app" -v "/app/node_modules" volumes-bind-i"
