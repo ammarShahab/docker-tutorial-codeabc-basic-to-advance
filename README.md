@@ -124,4 +124,4 @@
 ##### 4.1 Docker Volumes Bind Mount
 
 - as we update any code in the host machine it will not reflect in the container, so we need to bind mount it. <br>
-- follow the 4.2 flow
+- follow the 4.2 flow in "docker-volumes-bind-mount" folder
