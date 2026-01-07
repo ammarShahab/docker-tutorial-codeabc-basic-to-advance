@@ -6,7 +6,7 @@ const app = express();
 const PORT = 3000;
 
 app.get("/", (req, res) => {
-  res.send("Dockerize The Nodejs application");
+  res.send("Dockerize The Nodejs application Optimizely");
 });
 
 // Error route

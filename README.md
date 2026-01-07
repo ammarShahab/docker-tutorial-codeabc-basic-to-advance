@@ -76,3 +76,9 @@
 - to remove all the images in one command "docker image prune -a"
 - to name a container and remove aoutomatic after stop run "docker run -p 5001:3000 --name node_app_container --rm dockerize-nodeapplication:v1"
 - to stop container run "docker container stop given_container_name"
+
+## 3.0 Dockerize node application optimizely
+
+- created a new folder "dockerize-node-optimizely"
+- run "npm init -y" and "npm i express"
+- now follow the flow in the Dockerfile from 3.1
