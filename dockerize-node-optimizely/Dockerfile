@@ -13,4 +13,4 @@ EXPOSE 5000
 
 CMD ["node", "app.js"]
 
-# 3.2 now run "docker build --tag node-optimize-image ." then run " docker run -p 5001:5000 --name node_optimize_container --rm node-optimize-image"
+# 3.2 now run "docker build --tag node-optimize-image ." then run "docker run -p 5001:5000 --name node_optimize_container --rm node-optimize-image"

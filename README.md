@@ -92,7 +92,7 @@
 2. Named Volumes <br>
 3. Anonymous Volumes <br>
 
-#### 1. Host Mounted Volumes
+#### a. Host Mounted Volumes
 
 - Host mounted volumes are volumes that are mounted from the host machine to a container. সাধারনত আমাদের host machine এর সাথে container এর কোন connection থাকে না। Host Mounted Volumes এর ব্যাবহার করে এই connection করা যায়।<br>
 - They are useful when you want to share data between the host machine and the container. <br>
@@ -102,7 +102,7 @@
 
   - here "/path/to/host/dir" is the host path and "/path/to/container/dir" is the container path
 
-  #### 2. Named Volumes (Mostly used)
+  #### b. Named Volumes (Mostly used)
 
 - Named volumes are volumes that are created when the container is created and deleted when the container is removed. <br>
 - Named volumes are useful when you want to share data between multiple containers. <br>
@@ -112,10 +112,16 @@
 
   - here "myvolume" is the name of the volume and "/path/to/container/dir" is the container path
 
-  #### 3. Anonymous Volumes
+  #### c. Anonymous Volumes
 
 - Anonymous volumes are do not contains any name. <br>
   example:
   `docker run -v /path/to/container/dir `
 
   - here "/path/to/container/dir" is the container path
+  - Now follow the flow from 3.1
+
+##### 4.1 Docker Volumes Bind Mount
+
+- as we update any code in the host machine it will not reflect in the container, so we need to bind mount it. <br>
+- follow the 4.2 flow
