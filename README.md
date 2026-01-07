@@ -67,3 +67,10 @@
 - now follow the flow in the Dockerfile from 2.1
 - now to stop any container run "docker container stop container_id" or u can manually stop it using docker desktop
 - as the container stopped but the container will persist in the docker container as they are not removed. so to run the specific container again run "docker container start container_id or container_name"
+- to remove container first stop it then run "docker container rm container_id or container_name"
+- to remove the image run "docker rmi image_id or image_name"
+- if u created multiple container by creating multiple images in two different port with different version using and to run that run the command "docker run -p 5001:3000 dockerize-nodeapplication:v1" and "docker run -p 5002:3000 dockerize-nodeapplication:v2"
+- to stop that container run "docker container stop one_container_id second_container_id"
+- if u want to remove container automatically upon stop then run the image in a container run and add the flag --rm "docker run -p 5001:3000 --rm image_id" then stop the container using "docker container stop container_id or Name". It will stop and delete the container automatically.
+- to remove all the stopped container in one command "docker container prune"
+- to remove all the images in one command "docker image prune"
