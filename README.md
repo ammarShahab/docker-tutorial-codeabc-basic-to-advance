@@ -114,7 +114,7 @@
 
   #### 3. Anonymous Volumes
 
-- Anonymous volumes are volumes that are created when the container is created and deleted when the container is removed. <br>
+- Anonymous volumes are do not contains any name. <br>
   example:
   `docker run -v /path/to/container/dir `
 
