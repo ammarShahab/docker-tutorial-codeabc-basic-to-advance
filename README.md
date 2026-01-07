@@ -82,3 +82,40 @@
 - created a new folder "dockerize-node-optimizely"
 - run "npm init -y" and "npm i express"
 - now follow the flow in the Dockerfile from 3.1
+
+## 4.0 Docker Volumes
+
+- Volumes are persistent data stores for containers.
+
+<p>The three main types of docker volumes are:</p>
+1. Host Mounted Volumes <br>
+2. Named Volumes <br>
+3. Anonymous Volumes <br>
+
+#### 1. Host Mounted Volumes
+
+- Host mounted volumes are volumes that are mounted from the host machine to a container. সাধারনত আমাদের host machine এর সাথে container এর কোন connection থাকে না। Host Mounted Volumes এর ব্যাবহার করে এই connection করা যায়।<br>
+- They are useful when you want to share data between the host machine and the container. <br>
+- To create a host mounted volume, you need to specify the host path and the container path. <br>
+- example:
+  `docker run -v /path/to/host/dir:/path/to/container/dir `
+
+  - here "/path/to/host/dir" is the host path and "/path/to/container/dir" is the container path
+
+  #### 2. Named Volumes (Mostly used)
+
+- Named volumes are volumes that are created when the container is created and deleted when the container is removed. <br>
+- Named volumes are useful when you want to share data between multiple containers. <br>
+- To create a named volume, you need to specify the name of the volume. <br>
+- example:  
+  `docker run -v myvolume:/path/to/container/dir `
+
+  - here "myvolume" is the name of the volume and "/path/to/container/dir" is the container path
+
+  #### 3. Anonymous Volumes
+
+- Anonymous volumes are volumes that are created when the container is created and deleted when the container is removed. <br>
+  example:
+  `docker run -v /path/to/container/dir `
+
+  - here "/path/to/container/dir" is the container path
