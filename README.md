@@ -73,4 +73,6 @@
 - to stop that container run "docker container stop one_container_id second_container_id"
 - if u want to remove container automatically upon stop then run the image in a container run and add the flag --rm "docker run -p 5001:3000 --rm image_id" then stop the container using "docker container stop container_id or Name". It will stop and delete the container automatically.
 - to remove all the stopped container in one command "docker container prune"
-- to remove all the images in one command "docker image prune"
+- to remove all the images in one command "docker image prune -a"
+- to name a container and remove aoutomatic after stop run "docker run -p 5001:3000 --name node_app_container --rm dockerize-nodeapplication:v1"
+- to stop container run "docker container stop given_container_name"
