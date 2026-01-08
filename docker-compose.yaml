@@ -39,11 +39,11 @@ services:
       - CHOKIDAR_USEPOLLING=true
       - WATCHPACK_POLLING=true
 
-    # 7.3 set the network same as backend. Now run "docker-compose up" then "docker network ls" and u will see the network "docker-tutorial-codeabc-basic-to-advance_react-app-networ". In that way frontend and backend will be connected i.e any kind of rest api request will be send to the backend with the same network
+    # 7.3 set the network same as backend. Now run "docker-compose up" then "docker network ls" and u will see the network "docker-tutorial-codeabc-basic-to-advance_react-app-network". In that way frontend and backend will be connected i.e any kind of rest api request will be send to the backend with the same network
     networks:
       - react-app-network
 
-  # 7.4.0 if i have another service like DB and it needs to connect with backend so created a DB service. Following is the dummy DB and commented due to due to dummy which will get the the depends_on backend 7.4.1.
+  # 7.4.0 if i have another service like DB and it needs to connect with backend so created a DB service. Following is the dummy DB and commented due to due to dummy which will make error. The DB will depends_on backend 7.4.1.
 
   # DB:
   #   image: mongo

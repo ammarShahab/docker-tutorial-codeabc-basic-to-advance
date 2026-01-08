@@ -144,4 +144,4 @@
 - to see all the running network "docker network ls" and u will find the default network " docker-tutorial-codeabc-basic-to-advance_default" if any container is running.
 - to add any network with my application down the composer run "docker-compose down"
 - create docker network run "docker network create my-network". Now u can see the network "docker network ls" and u will find the "my-network". Note: if u want to delete the network run "docker network rm my-network" or want to delete all the running network "docker network prune"
-- now follow the flow in the docker-compose.yaml from 7.1 to connect the network
+- now follow the flow in the docker-compose.yaml from 7.1 how to connect the network in docker-compose.yaml
