@@ -14,6 +14,14 @@ services:
       - ./docker-volumes-bind-mount:/app
       - /app/node_modules
 
+    # 7.2 set network same as 7.1 created network but in array format
+    networks:
+      - react-app-network
+    # 7.4.1 add depends_on because we need to connect backend with DB also frontend but here it is commented due to dummy DB
+    # depends_on:
+    #   - frontend
+    #   - DB
+
     # 6.5 run in terminal "docker-compose up" then click the url "http://localhost:5000/" and u will get the "Dockerize the volume bind mount Nodejs applications".
 
     # 6.6 to stop the container run "docker-compose down"
@@ -30,3 +38,21 @@ services:
     environment:
       - CHOKIDAR_USEPOLLING=true
       - WATCHPACK_POLLING=true
+
+    # 7.3 set the network same as backend. Now run "docker-compose up" then "docker network ls" and u will see the network "docker-tutorial-codeabc-basic-to-advance_react-app-networ". In that way frontend and backend will be connected i.e any kind of rest api request will be send to the backend with the same network
+    networks:
+      - react-app-network
+
+  # 7.4.0 if i have another service like DB and it needs to connect with backend so created a DB service. Following is the dummy DB and commented due to due to dummy which will get the the depends_on backend 7.4.1.
+
+  # DB:
+  #   image: mongo
+  #   container_name: mongo_db_container
+  #   ports:
+  #     - "27017:27017"
+  #   networks:
+  #     - react-app-network
+
+# 7.1 created a network
+networks:
+  react-app-network:

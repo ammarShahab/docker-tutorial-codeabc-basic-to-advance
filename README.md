@@ -133,5 +133,15 @@
 
 ## 6.0 Docker Composer
 
+- it used to run mutiple container or service in one command.
 - as we want to run backend (docker-volumes-bind-mount) and frontend (dockerize-react-app) so we use docker composer.
 - so first we create a file "docker-compose.yaml" at the root where the folder is created and follow the flow in the docker-compose.yaml file from 6.1
+
+## 7.0 Docker Network
+
+- Network is a virtual network that allows containers to communicate with each other i.e frontend and backend.
+- to see the all command of docker network run "docker network --help"
+- to see all the running network "docker network ls" and u will find the default network " docker-tutorial-codeabc-basic-to-advance_default" if any container is running.
+- to add any network with my application down the composer run "docker-compose down"
+- create docker network run "docker network create my-network". Now u can see the network "docker network ls" and u will find the "my-network". Note: if u want to delete the network run "docker network rm my-network" or want to delete all the running network "docker network prune"
+- now follow the flow in the docker-compose.yaml from 7.1 to connect the network
