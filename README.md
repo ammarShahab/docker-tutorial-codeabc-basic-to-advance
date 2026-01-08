@@ -128,5 +128,5 @@
 
 ## 5.0 Dockerize the React Application
 
-- created a new folder "dockerize-react-app"
+- created a new folder "dockerize-react-app" and insatall react.
 - now follow the flow in the Dockerfile from 5.1
