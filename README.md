@@ -125,3 +125,8 @@
 
 - as we update any code in the host machine it will not reflect in the container, so we need to bind mount it. <br>
 - follow the 4.2 flow in "docker-volumes-bind-mount" folder
+
+## 5.0 Dockerize the React Application
+
+- created a new folder "dockerize-react-app"
+- now follow the flow in the Dockerfile from 5.1
