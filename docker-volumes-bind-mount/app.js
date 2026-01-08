@@ -4,7 +4,7 @@ const app = express();
 const PORT = 5000;
 
 app.get("/", (req, res) => {
-  res.send("Dockerize the volume bind mount Nodejs applications");
+  res.send("Dockerize the volume bind mount Nodejs application");
 });
 
 app.get("/error", (req, res) => {

@@ -1,0 +1,32 @@
+# 6.1 as we have command in terminal previously "docker run -p 5001:5000 --name volumes-container --rm -v "C:\Projects\docker-tutorial-codeabc-basic-to-advance\docker-volumes-bind-mount:/app" -v "/app/node_modules" volumes-bind-i", so in similar pattern we will command in docker-compose.yaml file
+version: "3.8"
+
+services:
+  backend:
+    # 6.2 build the image from the folder "./docker-volumes-bind-mount". Here, '.' means go to one step back and then go to the folder "docker-volumes-bind-mount"
+    build: ./docker-volumes-bind-mount
+    container_name: node_app_container
+    # 6.3 expose the port 5000
+    ports:
+      - "5000:5000"
+      #6.4 set volumes
+    volumes:
+      - ./docker-volumes-bind-mount:/app
+      - /app/node_modules
+
+    # 6.5 run in terminal "docker-compose up" then click the url "http://localhost:5000/" and u will get the "Dockerize the volume bind mount Nodejs applications".
+
+    # 6.6 to stop the container run "docker-compose down"
+
+    # 6.7 now command for frontend similar with backend just add "environment:- CHOKIDAR_USEPOLLING=true - WATCHPACK_POLLING=true" which helps to realtime update
+  frontend:
+    build: ./dockerize-react-app
+    container_name: react_app_container
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./dockerize-react-app:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true

@@ -130,3 +130,8 @@
 
 - created a new folder "dockerize-react-app" and insatall react.
 - now follow the flow in the Dockerfile from 5.1
+
+## 6.0 Docker Composer
+
+- as we want to run backend (docker-volumes-bind-mount) and frontend (dockerize-react-app) so we use docker composer.
+- so first we create a file "docker-compose.yaml" at the root where the folder is created and follow the flow in the docker-compose.yaml file from 6.1
